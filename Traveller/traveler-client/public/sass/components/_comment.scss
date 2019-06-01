@@ -1,0 +1,72 @@
+.comments-section{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  color: $color-primary-green-dark;
+  @include respond(tab-port-7){
+    width: 100%;
+  }
+
+  .comment-input{
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    background-color: rgba($color-white, .8);
+    border-left: 2px solid $color-primary-green-dark;
+    &__profile-image{
+      border-radius: 50%;
+      height: 10rem;
+      margin-right: 1rem;
+    }
+    &__form{
+     flex: 1;
+      &-area{
+        height: 100%;
+        width: 100%;
+        border: none;
+        padding: 1rem;
+        transition: all .5s;
+        &:focus{
+          outline: none;
+          border-bottom: 2px solid $color-primary-green-dark;
+          transform: scale(1.001);
+          box-shadow: 0 .5rem 1rem rgba($color-black, .3);
+        }
+      }
+    }
+  }
+}
+.comment{
+  display: flex;
+  height: 10rem;
+  width: 100%;
+  background-color: rgba($color-white, .8);
+  border-left: 2px solid $color-primary-green-dark;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  align-items: center;
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
+  &__header{
+    display: flex;
+    margin-bottom: 1rem;
+    &__username{
+      margin-right: 3rem;
+    }
+  }
+  &__profile-image{
+    border-radius: 50%;
+    height: 10rem;
+    margin-right: 1rem;
+  }
+}
+.comment-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+.contact-page-section{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+                  to right bottom,
+                  rgba($color-primary-green-light, .3),
+                  rgba($color-primary-green-dark, .3)),
+                  url(../images/nat-4.jpg);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: appear 2s ease-in;
+  .contact-page{
+    width: 80%;
+    @include respond(phablet){
+      width: 100%;
+    }
+  }
+}

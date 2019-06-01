@@ -1,0 +1,47 @@
+.story {
+  display: flex;
+  margin-bottom: 10rem;
+  color: $color-primary-green-dark;
+  box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  animation: storyAnimation 2s;
+  @include respond(phablet){
+    flex-direction: column;
+    border-top: 5px solid $color-primary-green;
+    border-bottom: 5px solid $color-primary-green;
+  }
+  &__image {
+    display: block;
+    flex: 0 0 60%;
+    &-item {
+      width: 100%;
+    }
+  }
+  &__info {
+    padding-left: 3rem;
+    border-left: 10px solid $color-primary-green;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    @include respond(phablet){
+      display: block;
+      border-left: none;
+      align-items: center;
+      text-align: center;
+      margin: 3rem 0;
+      padding: 0 2rem;
+    }
+    .btn-text {
+      align-self: self-start;
+    }
+  }
+  &__createdAt{
+    align-self: end;
+    font-size: 1.2rem;
+    padding: 1rem;
+    @include respond(phablet){
+      display: block;
+    }
+  }
+}

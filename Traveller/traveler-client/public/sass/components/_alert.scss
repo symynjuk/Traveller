@@ -1,0 +1,22 @@
+.alert{
+  font-size: 2rem;
+  height: 6rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__success{
+    color: $color-grey-dark;
+    background: rgba($color-white, .6);
+    border: 1px solid $color-white;
+    text-align: center;
+    border-radius: 4px;
+  }
+  &__danger{
+    color: $color-white;
+    background: rgba($color-red, .6);
+    border-radius: 4px;
+    border: 1px solid $color-red;
+    text-align: center;
+  }
+}

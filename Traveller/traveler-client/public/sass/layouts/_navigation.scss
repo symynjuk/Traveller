@@ -1,0 +1,96 @@
+.navigation {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  height: 6rem;
+  font-size: 1.7rem;
+  background-image: linear-gradient(
+                  to right bottom,
+                  rgba($color-primary-green, 1),
+                  rgba($color-primary-green-dark, 1));
+  @include respond(phablet){
+    color: white;
+    font-size: 2rem;
+    flex-direction: column;
+    //align-items: end;
+
+  }
+  &__hamburger{
+    display: none;
+   // flex-direction: column;
+    //align-items: start;
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-primary-green, 1),
+                    rgba($color-primary-green-dark, 1));
+    @include respond(phablet){
+      display: block;
+    }
+    &__item{
+      padding-top: 2rem;
+      padding-left: 2rem;
+      color: $color-white;
+    }
+  }
+  &__menu--left{
+    margin-left: 5%;
+    @include respond(phablet){
+      display: none;
+    }
+  }
+  &__menu--right{
+    margin-right: 5%;
+    @include respond(phablet){
+      display: none;
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    @include respond(phablet){
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    &--link{
+      transition: all .3s;
+      &:link,
+      &:visited{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-white;
+      }
+      &:hover{
+        background-color: rgba($color-white, .2);
+        transform: scale(1.01);
+      }
+    }
+    &--item{
+      display: inline-block;
+      letter-spacing: .2rem;
+
+      @include respond(phablet){
+        letter-spacing: 0;
+        display: block;
+        margin-bottom: .7rem;
+        font-size: 3rem;
+      }
+      &:not(:last-child){
+        padding-right: 2rem;
+        @include respond(phablet){
+          padding-right: 1rem;
+        }
+
+      }
+    }
+  }
+}

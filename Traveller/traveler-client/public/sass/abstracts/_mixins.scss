@@ -1,0 +1,42 @@
+/*
+$breakpoint argument:
+- phone,
+- phablet,
+- tab-port-7,
+- tab-port,
+- tab-land,
+- big-desktop
+*/
+
+@mixin respond($breakpoint){
+  @if($breakpoint == phone){
+    @media(max-width: 25em){ //400px /16
+      @content;
+    }
+  }
+  @if($breakpoint == phablet){
+    @media(max-width: 41.25em){ //660px /16
+      @content;
+    }
+  }
+  @if($breakpoint == tab-port-7){
+    @media(max-width: 50em){
+      @content;
+    }
+  }
+  @if($breakpoint == tab-port){
+    @media(max-width: 62.5em){ //1000px
+      @content;
+    }
+  }
+  @if($breakpoint == tab-land){
+    @media(max-width: 75em){  //1200px
+      @content;
+    }
+  }
+  @if($breakpoint == big-desktop){
+    @media(min-width: 112.5em){ //1800px
+      @content;
+    }
+  }
+}

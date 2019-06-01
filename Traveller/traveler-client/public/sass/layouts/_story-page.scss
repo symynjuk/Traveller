@@ -1,0 +1,64 @@
+.story-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  .story-section{
+    display: flex;
+    margin: 10rem;
+    @include respond(tab-port){
+      margin: 10rem 1rem;
+    }
+    @include respond(tab-port-7){
+      flex-direction: column;
+      margin: 3rem 1rem;
+    }
+    &__button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-item{
+        &:not(:last-child){
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &__gallery{
+      flex: 0 0 60%;
+      max-width: 60%;
+      margin-right: 5rem;
+      position: relative;
+      @include respond(tab-port-7){
+        max-width: 100%;
+        margin-right: 0;
+        background-color: rgba(#fff, .9);
+      }
+      .image-gallery-content:not(.fullscreen) .image-gallery-image {
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          object-fit: cover;
+          object-position: center center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .image-gallery-slide img{
+        max-height: 100vh;
+      }
+    }
+    &__description{
+      color: $color-primary-green-dark;
+      background-color: rgba($color-white, .9);
+      padding: 3rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

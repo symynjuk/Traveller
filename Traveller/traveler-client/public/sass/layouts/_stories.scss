@@ -1,0 +1,10 @@
+.stories{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 12rem auto;
+  color: $color-primary-green-dark;
+  @include respond(tab-port){
+    width: 90%;
+  }
+}

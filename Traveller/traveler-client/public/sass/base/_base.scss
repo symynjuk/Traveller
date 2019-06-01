@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land){
+    font-size: 56.25%;
+  }
+  @include respond(tab-port){
+    font-size: 50%;   //1rem = 8px  8px/16px = 50%
+  }
+  @include respond(big-desktop){
+    font-size: 75%;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    &-thumb {
+      background-image: linear-gradient(to right, $color-primary-green-light, $color-primary-green-dark);
+    }
+    &-button{
+      height: 6rem;
+      background-image: linear-gradient(to right, $color-primary-green-light, $color-primary-green-dark);
+    }
+  }
+
+}
+body{
+  box-sizing: border-box;
+  background-color: rgba($color-grey-light-3, 1);
+}

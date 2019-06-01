@@ -1,0 +1,93 @@
+.btn{
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 2rem;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+  }
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--green {
+    background-image: linear-gradient(to right, $color-primary-green, $color-primary-green-dark);
+    color: $color-white;
+
+    &::after {
+      background-image: linear-gradient(to right, $color-primary-green, $color-primary-green-dark);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+}
+.btn-text{
+  &,
+  &:link,
+  &:visited{
+    color: $color-white;
+    background-image: linear-gradient(to right, $color-primary-green, $color-primary-green-dark);
+    font-size: 3rem;
+    padding:.3rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid $color-primary-green-dark;
+    display: inline-block;
+    transition: all .3s;
+    text-decoration: none;
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+  }
+  &:hover{
+    transform: translateY(-3px);
+    background-image: linear-gradient(to left, $color-primary-green, $color-primary-green-dark);
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+  }
+  &:active{
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+  &-small{
+    font-size: 2rem !important;
+  }
+}
